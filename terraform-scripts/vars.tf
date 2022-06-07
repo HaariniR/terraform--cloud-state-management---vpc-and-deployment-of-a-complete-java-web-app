@@ -65,7 +65,7 @@ variable "region" {
   default = "us-east-1"
 }
 variable "AMIS" {
-  type = "map"
+  type = map
   default = {
     us-east-1 = "ami-09d56f8956ab235b3"
     us-east-2 = "ami-08d56f8956ab235b2"
