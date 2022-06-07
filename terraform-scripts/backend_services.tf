@@ -19,7 +19,7 @@ resource "aws_db_instance" "vprofile_mysql" {
   engine               = "mysql"
   engine_version       = "5.6.34"
   instance_class       = "db.t2.micro"
-  name                 = var.dbname
+  db_name                 = var.dbname
   username             = var.dbuser
   password             = var.dbpass
   parameter_group_name = "default.mysql5.6"
@@ -38,7 +38,7 @@ resource "aws_elasticache_cluster" "vprofile_elastic_cache" {
   parameter_group_name = "default.memcached1.5"
   port                 = 11211
   security_group_names = [aws_security_group.vprofile-backend-inst.id]
-  db_subnet_group_name = aws_elasticache_subnet_group.elasticache_subnet_group.name
+  subnet_group_name = aws_elasticache_subnet_group.elasticache_subnet_group.name
 }
 
 resource "aws_mq_broker" "vprofile_active_mq" {
