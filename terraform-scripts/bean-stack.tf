@@ -130,6 +130,6 @@ resource "aws_elastic_beanstalk_environment" "vprofile-bean-prod" {
     value     = aws_security_group.vprofile-elb-sg
   }
 
-  depends_on = [aws_security_group.vprofile-elb-sg, aws_security_group.vprofile-beanstalk-sg.id]
+  depends_on = [aws_security_group.vprofile-elb-sg, aws_security_group.vprofile-beanstalk-sg]
 
 }
