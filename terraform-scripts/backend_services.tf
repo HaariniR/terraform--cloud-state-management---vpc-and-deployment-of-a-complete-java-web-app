@@ -32,7 +32,7 @@ resource "aws_elasticache_cluster" "vprofile_elastic_cache" {
   engine               = "memcached"
   node_type            = "cache.t2.micro"
   num_cache_nodes      = 1
-  parameter_group_name = "default.memcached1.5"
+  parameter_group_name = "default.memcached1.6"
   port                 = 11211
   security_group_ids = [aws_security_group.vprofile-backend-inst.id]
   subnet_group_name    = aws_elasticache_subnet_group.elasticachesubnetGroup.name
