@@ -67,7 +67,7 @@ pipeline {
        }
 
       steps {
-         withSonarQubeEnv('My SonarQube Server') { // If you have configured more than one global server connection, you can specify its name
+         withSonarQubeEnv('sonar-pro') { // If you have configured more than one global server connection, you can specify its name
              sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile-repo \
                    -Dsonar.projectVersion=1.0 \
