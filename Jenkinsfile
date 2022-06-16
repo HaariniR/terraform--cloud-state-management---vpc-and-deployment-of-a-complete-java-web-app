@@ -82,6 +82,7 @@ pipeline {
              waitForQualityGate abortPipeline:true
         }
        }
+    }
 
     stage("Deploy kubernetes cluster with helm") {
       agent{label 'KOPS'}
