@@ -87,9 +87,7 @@ pipeline {
     stage("Deploy kubernetes cluster with helm") {
         agent{ 
           node {
-          label {
-            'KOPS'
-          } 
+          label 'KOPS'
         }
         }
       steps {
