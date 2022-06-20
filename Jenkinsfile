@@ -91,7 +91,7 @@ pipeline {
         }
         }
       steps {
-        sh "helm upgrade --install --force vprofilestack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod --kubeconfig='~/.kube/config'"
+        sh "helm upgrade --install --force vprofilestack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod"
       }
     }
    }
