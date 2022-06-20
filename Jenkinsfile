@@ -87,7 +87,7 @@ pipeline {
     stage("Deploy kubernetes cluster with helm") {
       agent{label 'KOPS'}
       steps {
-        sh "helm upgrade --install --force vprofilestack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod"
+        sh "helm upgrade --install --force vprofilestack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod --kubeconfig "~/.kube/config"
       }
     }
    }
